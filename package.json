@@ -1,0 +1,26 @@
+{
+  "private": false,
+  "homepage": "https://https://github.com/Orivoir/express-live-reloading",
+  "displayName": "parse client langs from headers for you request with express",
+  "name": "express-langs",
+  "version": "0.1.5",
+  "description": "resolve accept langagues from header for you request",
+  "main": "express-langs.js",
+  "scripts": {},
+  "repository": {
+    "type": "git"
+    ,"url": "https://github.com/Orivoir/express-langs.git"
+  },
+  "keywords": [
+    "express",
+    "langs",
+    "parse",
+    "langagues",
+    "middleware",
+    "request",
+    "header",
+    "use"
+  ],
+  "author": "S.Gaborieau <sam.gabor@hotmail.com> (https://https://github.com/Orivoir/express-live-reloading)",
+  "license": "BSD-2-Clause"
+}
