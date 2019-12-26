@@ -92,7 +92,7 @@ server.listen( 80 , () => console.log('server run ...') ) ;
 
 ```
 
-## `exists` methods make a contains test with langs found *e.g* :
+## `exists` methods make a relative test with langs found *e.g* :
 
 ```javascript
 langs.exists('en') ; // match with 'en-US'
