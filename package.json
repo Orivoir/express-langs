@@ -3,7 +3,7 @@
   "homepage": "https://https://github.com/Orivoir/express-live-reloading",
   "displayName": "parse client langs from headers for you request with express",
   "name": "express-langs",
-  "version": "0.2.0",
+  "version": "0.2.1",
   "description": "resolve accept langagues from header for you request",
   "main": "express-langs.js",
   "scripts": {},
@@ -14,10 +14,11 @@
   "keywords": [
     "express",
     "langs",
+    "lang",
     "parse",
+    "request",
     "langagues",
     "middleware",
-    "request",
     "header",
     "use"
   ],
