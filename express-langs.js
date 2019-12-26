@@ -1,39 +1,27 @@
+/**
+ * @author S.Gaborieau
+ *
+ * @package [npm] <https://www.npmjs.com/package/express-langs>
+ * @version 0.2.0 `stable version`
+ *
+ * @git <https://github.com/Orivoir/express-langs/blob/master/README.md>
+ * @npm <https://www.npmjs.com/package/express-langs>
+ *
+ * @summary express middleware parse langs user from headers `Accept`
+ */
+
 module.exports =
 /**
- * @param {string} _default - default country code return if not found with request
- * @return void
+ * @exports Function middleware express
+
  * @description resolve langagues header accept in **request** get `array` langagues with `request.langs`
  */
-function ( _default = "en" ) {
+function (req , skip , next) {
 
-    return (req , skip , next) => {
+    const langs = req.headers["accept-language"] ;
 
-        req.langs = [];
+    req.langs = require('./lib/parse')( langs ) ;
 
-        const langs = req.headers["accept-language"] ;
-
-        if( !langs ) {
-            req.langs.push( _default ) ;
-            next();
-        }
-
-        langs
-        .split(';')
-        .forEach( element => {
-
-            let code = element.split(',')[1] ;
-
-            if( code ) {
-
-                if(
-                    code.indexOf('-') != -1 &&
-                    !req.langs.find( lang => code === lang )
-                )
-                    req.langs.push( code ) ;
-            }
-        } ) ;
-
-        next() ;
-    } ;
+    next() ;
 
 }
