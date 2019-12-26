@@ -3,9 +3,9 @@
 [![npm](https://img.shields.io/npm/l/express-langs.svg?style=for-the-badge)](https://www.npmjs.com/package/express-langs)
 [![npm version](https://img.shields.io/npm/v/express-langs.svg?style=for-the-badge)](https://www.npmjs.com/package/express-langs)
 
-![screen shot demo](./screen-demo.png)
-
 ## parse langs from `request` for easier use with *express*
+
+![screen shot demo](./screen-demo.png)
 
 > resolve langagues **accept** in header `request` get `array` langagues with `request.langs`
 
