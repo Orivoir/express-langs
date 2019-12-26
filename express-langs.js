@@ -13,15 +13,19 @@
 module.exports =
 /**
  * @exports Function middleware express
-
+ *
  * @description resolve langagues header accept in **request** get `array` langagues with `request.langs`
  */
 function (req , skip , next) {
 
     const langs = req.headers["accept-language"] ;
 
-    req.langs = require('./lib/parse')( langs ) ;
+    req.langs = {
+        items: require('./lib/parse')( langs )
+        ,existsStrict: require('./lib/check-exists-strict')
+        ,exists: require('./lib/check-exists')
+    } ;
 
     next() ;
 
-}
+} ;
