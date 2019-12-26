@@ -100,7 +100,7 @@ langs.exists('en') ; // match with 'en'
 langs.exists('en') ; // not match with 'fr'
 ```
 
-## you can make a `strict test exists` with:
+## you can make a `strict test exists` *e.g* :
 
 ```javascript
 langs.existsStrict('en') ; // not match with 'en-US'
