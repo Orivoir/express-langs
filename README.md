@@ -34,7 +34,7 @@ app
 
 app.get('/' , ( req , res ) => {
 
-    console.log( req.langs ) ;
+    console.log( req.langs ) ; // array[string]
 
     res.send('hello world !') ;
 
