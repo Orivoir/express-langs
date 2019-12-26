@@ -11,50 +11,46 @@
 
 ### Installation
 
-
 ```npm install express-langs --save```
 
 ```yarn add express-langs```
-
 
 server.js
 
 ```javascript
 const
     exp = require('express')
-    , app = exp()
-    , langs = require('express-langs')
+    ,app  =exp()
+    ,server = require('http').Server( app )
+    ,langs = require('express-langs')
 ;
 
 app
-    // your other middleware ...
-    .use( langs() )
-    // your other middleware ...
+    // ... , you other middleware
+    .use( langs )
+    // you other middleware ... ,
 ;
 
-app.get('/' , ( req , res ) => {
 
-    console.log( req.langs ) ; // array[string]
-
-    res.send('hello world !') ;
-
-} )
-
-```
-
-
-### you can give an **default langagues** optional if **header** `ACCEPT` is not defined or `null`
-
-server.js
-
-```javascript
-// , ...
 app
-    // your other middleware ...
-    .use( langs('en') )
-    // your other middleware ...
+    .get('/' , (req,res) => {
+
+        /**
+         * array<object>
+         *  {
+         *      lang: string
+         *      ,val: float
+         *  }
+         */
+        console.log( req.langs );
+
+        res.send( 'hello world !' ) ;
+
+    } )
 ;
-// ... ,
+
+server.listen( 80 , () => console.log('server run ...') ) ;
+
 ```
 
-### develop by [Samuel Gaborieau]( https://orivoir.github.io/profil-reactjs/ ) with <3 and NodeJS for *Open Source* and *enjoy* !
+#### develop by [Samuel Gaborieau]( https://orivoir.github.io/profil-reactjs/ ) with <3 and NodeJS for *Open Source* and *enjoy* !
