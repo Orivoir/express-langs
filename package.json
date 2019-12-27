@@ -9,7 +9,7 @@
   "scripts": {
     "test": "mocha"
     ,"coverage": "nyc npm test"
-    ,"report": "nyc report --reporter=text-lcov"
+    ,"report": "nyc --reporter=lcov npm run coverage"
     ,"codecov": "codecov"
   },
   "repository": {
