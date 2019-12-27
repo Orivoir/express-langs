@@ -6,10 +6,15 @@
   "version": "0.2.62",
   "description": "resolve accept langagues from header for you request",
   "main": "express-langs.js",
-  "scripts": {},
+  "scripts": {
+    "test": "mocha"
+    ,"coverage": "nyc npm test"
+    ,"report": "nyc report --reporter=html"
+    ,"codecov": "codecov"
+  },
   "repository": {
-    "type": "git"
-    ,"url": "https://github.com/Orivoir/express-langs.git"
+    "type": "git",
+    "url": "https://github.com/Orivoir/express-langs.git"
   },
   "keywords": [
     "express",
@@ -23,5 +28,11 @@
     "use"
   ],
   "author": "S.Gaborieau <sam.gabor@hotmail.com> (https://https://github.com/Orivoir/express-live-reloading)",
-  "license": "BSD-2-Clause"
+  "license": "BSD-2-Clause",
+  "devDependencies": {
+    "chai": "^4.2.0",
+    "codecov": "^3.6.1",
+    "mocha": "^6.2.2",
+    "nyc": "^15.0.0"
+  }
 }
