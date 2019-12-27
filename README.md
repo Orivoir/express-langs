@@ -42,7 +42,7 @@ app
          *      ,val: float
          *  }
          */
-        console.log( req.langs );
+        console.log( req.langs.items );
 
         res.send( 'hello world !' ) ;
 
