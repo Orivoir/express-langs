@@ -8,8 +8,8 @@
   "main": "express-langs.js",
   "scripts": {},
   "repository": {
-    "type": "git"
-    ,"url": "https://github.com/Orivoir/express-langs.git"
+    "type": "git",
+    "url": "https://github.com/Orivoir/express-langs.git"
   },
   "keywords": [
     "express",
@@ -23,5 +23,8 @@
     "use"
   ],
   "author": "S.Gaborieau <sam.gabor@hotmail.com> (https://https://github.com/Orivoir/express-live-reloading)",
-  "license": "BSD-2-Clause"
+  "license": "BSD-2-Clause",
+  "devDependencies": {
+    "mocha": "^6.2.2"
+  }
 }
