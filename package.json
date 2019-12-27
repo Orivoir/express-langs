@@ -3,10 +3,12 @@
   "homepage": "https://https://github.com/Orivoir/express-live-reloading",
   "displayName": "parse client langs from headers for you request with express",
   "name": "express-langs",
-  "version": "0.2.63",
+  "version": "0.3.0",
   "description": "resolve accept langagues from header for you request",
   "main": "express-langs.js",
-  "scripts": {},
+  "scripts": {
+    "test": "mocha"
+  },
   "repository": {
     "type": "git",
     "url": "https://github.com/Orivoir/express-langs.git"
@@ -25,6 +27,7 @@
   "author": "S.Gaborieau <sam.gabor@hotmail.com> (https://https://github.com/Orivoir/express-live-reloading)",
   "license": "BSD-2-Clause",
   "devDependencies": {
+    "chai": "^4.2.0",
     "mocha": "^6.2.2"
   }
 }
