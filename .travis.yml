@@ -10,6 +10,9 @@ node_js:
 before_install: npm i -g npm@latest
 
 install:
+  - npm install --save-dev nyc
+  - npm install --save-dev mocha
+  - npm install -save-dev chai
   - npm install -g codecov
 script:
   - codecov
