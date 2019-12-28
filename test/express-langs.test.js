@@ -15,7 +15,6 @@ describe('middleware' , () => {
         console.log('\n\n\t-- free middleware --\n');
     } ) ;
 
-
     describe('middleware entry point test' , () => {
 
 
@@ -76,7 +75,6 @@ describe('middleware' , () => {
 
         } ) ;
 
-
     } ) ;
 
     describe('build regexp () => object' , () => {
@@ -94,6 +92,46 @@ describe('middleware' , () => {
         it('should be have source property' , () => {
 
             expect( regBuild ).to.have.property( 'source' ) ;
+
+        } ) ;
+
+        it('should \\throw TypeError' , () => {
+
+            try {
+
+                buildRegexpTest() ;
+
+                throw 'have not throw TypeError'
+            } catch( TypeError ) {
+                //  ok!
+            }
+
+            try {
+
+                buildRegexpTest("format" , /invalidoptions/i ) ;
+
+                throw 'have not throw TypeError';
+            } catch( TypeError ) {
+                //  ok!
+            }
+
+        } ) ;
+
+    } ) ;
+
+    describe('test exists with regexp' , () => {
+
+        it('should return boolean' , () => {
+
+            assert.isBoolean(reqFactory.langs.exists( 'fr' ) ) ;
+            assert.isBoolean(reqFactory.langs.exists( /FR/i ) ) ;
+
+        } ) ;
+
+        it('should return true' , () => {
+
+            assert.isTrue( reqFactory.langs.exists( 'test' ) ) ;
+            assert.isTrue( reqFactory.langs.exists( /Test/i ) ) ;
 
         } ) ;
 

@@ -100,6 +100,16 @@ langs.exists('en') ; // match with 'en'
 langs.exists('en') ; // not match with 'fr'
 ```
 
+## or with an **pattern** *e.g* :
+
+
+```javascript
+langs.exists( /en/i ) ; // match with 'en-US'
+langs.exists( /en/i ) ; // match with 'en'
+
+langs.exists( /en|fr/i ) ; // match with 'fr'
+```
+
 ## you can make a `strict test exists` *e.g* :
 
 ```javascript
