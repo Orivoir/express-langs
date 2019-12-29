@@ -58,20 +58,13 @@ describe('middleware' , () => {
 
         } ) ;
 
-        it('should be throw TypeError' , () => {
+        it('should be \\throw TypeError' , () => {
 
-            try {
-                expect( reqFactory.langs.exists( 42 ) ).to.throw( TypeError ) ;
-            } catch( TypeError ) {
-                console.log('have success throw TypeError');
-            }
+            const fxThrow = () => reqFactory.langs.exists( 42 ) ;
+            const fxThrow2 = () => reqFactory.langs.existsStrict( 42 ) ;
 
-            try {
-                expect( reqFactory.langs.existsStrict( 42 ) ).to.throw( TypeError ) ;
-            } catch( TypeError ) {
-                console.log('have success throw TypeError');
-            }
-
+            expect( fxThrow ).to.have.throw( TypeError ) ;
+            expect( fxThrow2 ).to.have.throw( TypeError ) ;
 
         } ) ;
 

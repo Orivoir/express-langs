@@ -2,7 +2,7 @@
  * @author S.Gaborieau
  *
  * @package [npm] <https://www.npmjs.com/package/express-langs>
- * @version 0.2.0 `stable version`
+ * @version 0.4.0 `pre-stable version`
  *
  * @git <https://github.com/Orivoir/express-langs/blob/master/README.md>
  * @npm <https://www.npmjs.com/package/express-langs>
@@ -24,6 +24,7 @@ function (req , skip , next) {
         items: require('./lib/parse')( langs )
         ,existsStrict: require('./lib/check-exists-strict')
         ,exists: require('./lib/check-exists')
+        ,getWith: require('./lib/get-with-pattern')
     } ;
 
     next() ;
