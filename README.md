@@ -123,4 +123,14 @@ langs.existsStrict('en') ; // match with 'en'
 langs.existsStrict('en') ; // not match with 'fr'
 ```
 
+## `getWith` method get array langs match with you support `pattern`
+
+```javascript
+const supportLangs = langs.getWith( /en|fr|es/i ) ; // array[ langs ]
+
+// you can give an string for build an pattern e.g :
+const pattern = "en|fr|es" ;
+const supportLangs = langs.getWith( pattern ) ; // array[ langs ]
+```
+
 #### develop by [Samuel Gaborieau]( https://orivoir.github.io/profil-reactjs/ ) with <3 and NodeJS for *Open Source* and *enjoy* !
